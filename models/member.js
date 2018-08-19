@@ -4,7 +4,7 @@ const autoIncrement = require('mongoose-auto-increment');
 const  connection = mongoose.createConnection(process.env.DB_URL);
 autoIncrement.initialize(connection);
 
-const eventSchema = mongoose.Schema({
+const memberSchema = mongoose.Schema({
     _id :{
       type:Number
     },
@@ -12,15 +12,19 @@ const eventSchema = mongoose.Schema({
       type:String,
       required:true
     },
-    date:{
-      type:Date,
-      required:true
+    age:{
+      type:Number,
     },
-    venue:{
-      type:String,
+    mobile:{
+      type:Number,
     }
+    email:{
+      type:String,
+      required:true
+    }
+
 })
 
-eventSchema.plugin(autoIncrement.plugin, 'event');
+memberSchema.plugin(autoIncrement.plugin, 'member');
 
-module.exports = mongoose.model('event',eventSchema);
+module.exports = mongoose.model('member',memberSchema);
