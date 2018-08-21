@@ -12,6 +12,6 @@ router.get('/:id',memberController.member_get_one)
 
 router.post('/',memberController.member_add)
 
-router.delete('/',memberController.member_remove)
+router.delete('/:id',memberController.member_remove)
 
 module.exports = router
