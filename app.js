@@ -20,11 +20,12 @@ const auth = require('./middlewares/auth')
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
 //routes
 const eventRoutes = require('./routes/event')
+const memberRoutes = require('./routes/member')
 
 app.use('/event',eventRoutes)
+app.use('/member',memberRoutes)
 app.get('/',(req,res,next)=>{
   res.send(`<h2>Hello </h2>`)
 })

@@ -17,7 +17,7 @@ const memberSchema = mongoose.Schema({
     },
     mobile:{
       type:Number,
-    }
+    },
     email:{
       type:String,
       required:true
