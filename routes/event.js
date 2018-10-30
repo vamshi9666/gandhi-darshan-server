@@ -13,4 +13,4 @@ router.patch('/:id',eventController.update_event)
 
 router.delete('/:id',eventController.delete_event)
 
-module.exports = router
+module.exports = router;
