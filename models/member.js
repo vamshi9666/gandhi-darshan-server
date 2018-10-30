@@ -23,7 +23,8 @@ const memberSchema = mongoose.Schema({
       required:true
     }
 
-})
+}, {
+    timeStrap: true)
 
 memberSchema.plugin(autoIncrement.plugin, 'member');
 
